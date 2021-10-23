@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> template</title>
+    
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--google fonts awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Work Sans", sans-serif;
+      }
+
+      .container {
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /*small*/
+      @media only screen and (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      /*medium*/
+      @media only screen and (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      /*large*/
+      @media only screen and (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+
+      .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f6f6f6;
+        padding: 0.5%;
+      }
+      .header .links {
+        position: relative;
+      }
+      .header .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        min-width: 200px;
+        display: none;
+        top: calc(100% + 15px);
+        background-color: #f6f6f6;
+        z-index: 1;
+      }
+      .header .links ul::before {
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #f6f6f6 transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+      }
+      .header .links:hover ul {
+        display: block;
+      }
+      .header .links ul li a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #333;
+        transition: 0.3s;
+      }
+      .header .links ul li a:hover {
+        padding-left: 25px;
+      }
+      .header .links ul li:not(:last-child) a {
+        border-bottom: 1px solid #ddd;
+      }
+      .landing {
+        background-image: url(image.jpeg);
+        background-size: cover;
+        height: calc(100vh - 64px);
+        margin: 0;
+        position: relative;
+      }
+      .landing .landText {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 420px;
+        max-width: 100%;
+        text-align: center;
+      }
+      .landText h1 {
+        font-weight: 800;
+      }
+      .landText p {
+        font-weight: 500;
+        font-size: 20px;
+      }
+      .button:hover {
+        background-color: black;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      .button {
+        border: 2px solid black;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        color: black;
+        padding: 10px 32px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <h2
+          style="
+            height: 7px;
+            line-height: 5px;
+            font-family: 'Dancing Script', cursive;
+          "
+        >
+          <bold>FLORIUM</bold>
+        </h2>
+
+        <div class="links">
+          <i class="fas fa-bars fa-2x"></i>
+          <ul>
+            <li><a href="#serv">Services</a></li>
+            <li><a href="#port">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="landing">
+      <div class="landText">
+        <p>WELCOME TO #1 FLOWER SHOP</p>
+        <h1>FLORIUM</h1>
+        <p>
+          Established in 1999, our flower shop provides a wide variety of the
+          best floral arrangements.
+        </p>
+        <button class="button button5">Get in touch</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>template</title>
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--google fonts awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .container {
+        margin: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /*small*/
+      @media only screen and (min-width: 768px) {
+        .container {
+          width: 750px;
+        }
+      }
+      /*medium*/
+      @media only screen and (min-width: 992px) {
+        .container {
+          width: 970px;
+        }
+      }
+      /*large*/
+      @media only screen and (min-width: 1200px) {
+        .container {
+          width: 1170px;
+        }
+      }
+
+      .special-heading {
+        color: #ebeced;
+        font-size: 100px;
+        text-align: center;
+        font-weight: 800;
+        letter-spacing: -3px;
+        margin: 0;
+      }
+      .special-heading + p {
+        margin: -30px 0 0;
+        font-size: 20px;
+        text-align: center;
+        color: #797979;
+      }
+      /*small*/
+      @media only screen and (max-width: 767px) {
+        .special-heading {
+          font-size: 60px;
+        }
+        .special-heading + p {
+          margin-top: -20px;
+        }
+      }
+      .about {
+        padding-top: 40px;
+        padding-bottom: calc(60px +60px);
+        margin-bottom: 100px;
+      }
+      .about-content {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      @media only screen and (max-width: 991px) {
+        .about-content {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      .about .about-content .image {
+        position: relative;
+        width: 320px;
+        height: 375px;
+      }
+      @media only screen and (max-width: 991px) {
+        .about .about-content .image {
+          margin: 0 auto 60px;
+        }
+      }
+
+      .about .about-content .image::before {
+        content: "";
+        background-color: rgba(46, 61, 52, 0.877);
+        width: 100px;
+        height: calc(100% + 100px);
+        top: -40px;
+        position: absolute;
+        left: -25px;
+        z-index: -1;
+      }
+
+      @media only screen and (max-width: 991px) {
+        .about .about-content .image::before {
+          display: none;
+        }
+      }
+      .about-content .image img {
+   
+        max-width: 100%;
+      }
+      .about .about-content .text {
+        flex-basis: calc(100% - 450px);
+        margin-top: 30px;
+      }
+      .about .about-content .text p:first-of-type {
+        font-weight: bold;
+        line-height: 2;
+        margin-bottom: 50px;
+      }
+      .about .about-content .text hr {
+        width: 50%;
+        display: inline-block;
+        /* color: rgba(219, 190, 26, 0.877); */
+        background-color: black;
+      }
+      .about .about-content .text p:last-of-type {
+        line-height: 2;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about" id="about">
+      <div class="container">
+        <h2 class="special-heading">About</h2>
+        <p>Don't be busy,be productive</p>
+        <div class="about-content">
+          <div class="image">
+            <img src="image.jpeg" alt="" />
+          </div>
+          <div class="text">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. expedita
+              voluptatum, ipsum sit dolor exercitationem temporibus qui! Lorem,
+              ipsum dolor sit amet consectetur adipisicing elit. expedita
+              voluptatum, ipsum sit dolor exercitationem temporibus qui!
+            </p>
+            <hr />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. expedita
+              voluptatum, ipsum sit dolor exercitationem temporibus qui! Lorem,
+              ipsum dolor sit amet consectetur adipisicing elit. expedita
+              voluptatum, ipsum sit dolor exercitationem temporibus qui!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

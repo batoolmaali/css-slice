@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about</title>
+
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!--google fonts awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      section {
+        padding: 80px 180px;
+      }
+      /* about */
+      .about .content {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .about .content .col-left {
+        position: relative;
+        width: 45%;
+      }
+
+      .about .content .col-right {
+        position: relative;
+        width: 50%;
+      }
+
+      .about .content .col-left .img-card {
+        position: relative;
+        width: 100%;
+        min-height: 500px;
+        /* height: 100%; */
+      }
+      .about .content .col-left .img-card img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .about .content .col-right .content-title {
+        font-size: 2em;
+        font-weight: 800;
+        margin-bottom: 20px;
+      }
+      .about .content .col-right p {
+        font-size: 1em;
+        margin-bottom: 20px;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .section-title {
+        display: inline-block;
+        text-transform: uppercase;
+        border-bottom: 10px solid #5f2161;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .btn {
+        color: #fff;
+        background-color: #5f2161;
+        font-size: 1em;
+        font-weight: 600;
+        display: inline-block;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 1px;
+        border-radius: 2px;
+        transform: 0.5s ease;
+      }
+      .btn:hover {
+        background-color: #5f2161;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="about" id="about">
+      <div class="title">
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="content">
+        <div class="column col-left reveal">
+          <div class="img-card">
+            <img src="me.jpeg" alt="image" />
+          </div>
+        </div>
+        <div class="column col-right reveal">
+          <h2 class="content-title">Hey There! I am full stack developer</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+            placeat eius dolorem nesciunt, voluptatem similique et provident
+            sapiente eos in inventore unde esse velit facilis rerum non
+            voluptatibus. Fugiat expedita mollitia eum consectetur provident
+            voluptate, minima laboriosam possimus obcaecati quo.<br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            distinctio beatae voluptas! At aperiam iure hic quibusdam quia nam,
+            ut error rem nobis doloribus adipisci unde omnis atque quas
+            repellat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Illum distinctio beatae voluptas! At aperiam iure hic quibusdam quia
+            nam, ut error rem nobis doloribus adipisci unde omnis atque quas
+            repellat! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Illum distinctio beatae voluptas! At voluptas! At
+          </p>
+          <a href="#" class="btn">See More</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

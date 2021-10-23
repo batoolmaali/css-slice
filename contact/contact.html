@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Document</title>
+    <style>
+        /* contact */
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  padding: 80px 180px;
+}
+
+.contact .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.contact .content .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact .content .row .card {
+  background-color: #fff;
+  width: 220px;
+  margin: 10px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 5px 25px rgba(1 1 1/15%);
+}
+.contact .content .row .card .contact-icon {
+  color: rgb(217, 219, 81);
+  font-size: 3em;
+  text-align: center;
+  transition: 0.5s ease;
+}
+
+.contact .content .row .card:hover .contact-icon {
+  transform: translateY(-10px);
+}
+.contact .content .row .card .info {
+  text-align: center;
+}
+.contact .content .row .card .info h3 {
+  color: rgb(117, 117, 53);
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 10px;
+}
+.title{
+    text-align: center;
+}
+h2{
+     display: inline-block;
+     text-transform: uppercase;
+     border-bottom:  10px solid rgb(217, 219, 81);
+     padding-bottom: 10px;
+     margin-bottom: 20px;
+     
+ }
+    </style>
+</head>
+<body>
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="title ">
+            <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="content">
+                <div class="row">
+                    <div class="card reveal">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+
+                        <div class="info">
+                            <h3>Address</h3>
+                            <span>Address, City, Country</span>
+                        </div>
+                    </div>
+                    <div class="card reveal">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+
+                        <div class="info">
+                            <h3>Phone</h3>
+                            <span>+00 0000 000 000</span>
+                        </div>
+                    </div>
+                    <div class="card reveal">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+
+                        <div class="info">
+                            <h3>Email Address</h3>
+                            <span>contact@email.com</span>
+                        </div>
+                    </div>
+                    <div class="card reveal">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+
+                        <div class="info">
+                            <h3>Website</h3>
+                            <span>MyWebsite.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section> 
+</body>
+</html>

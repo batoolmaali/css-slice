@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #ddd;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 0;
+        height: 100vh;
+        width: 80vw;
+      }
+      .cardd {
+        width: 90%;
+        height: 100%;
+        border-radius: 8px;
+        display: flex;
+        margin: auto;
+        box-shadow: 0 0 10px 1px rgb(0, 0, 0, 0.2);
+        background-color: #fff;
+      }
+      .cardd .image,
+      .cardd .info {
+        width: 50%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 0 0 8px;
+      }
+      .more-info {
+        display: flex;
+        justify-content: space-between;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 40px;
+      }
+      .reviews {
+        color: #ffc107;
+      }
+      .info-content {
+        font-size: 14px;
+      }
+      .btn {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-2 {
+        width: 45%;
+        background-color: transparent;
+        border: 2px solid black;
+        border-radius: 4px;
+      }
+      .btn-1 {
+        width: 45%;
+
+        background-color: rgb(20, 20, 20);
+        color: white;
+        border: 2px solid black;
+        border-radius: 4px;
+      }
+      @media only screen and (max-width: 992px) {
+        .cardd {
+          width: 100%;
+          flex-direction: column;
+        }
+        .cardd .image,
+        .cardd .info {
+          width: 100%;
+        }
+        .img {
+          width: 100%;
+        }
+        .more-info {
+          padding: 10px;
+        }
+        .info {
+          width: 100%;
+          padding: 10px;
+          background-color: #fff;
+        }
+      }
+    </style>
+  </body>
+  <div class="container">
+    <div class="cardd">
+      <div class="image">
+        <img src="product1.jpg" alt="" />
+      </div>
+
+      <div class="info">
+        <h1>Product Name</h1>
+        <div class="reviews">
+          <i class="filled fas fa-star"></i>
+          <i class="filled fas fa-star"></i>
+          <i class="filled fas fa-star"></i>
+          <i class="filled fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <div class="price">2100$</div>
+        <div class="more-info">
+          <h5>Description</h5>
+          <h5>Basic Info</h5>
+          <h5>Caliber</h5>
+        </div>
+        <div class="info-content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nostrum
+            atque quam debitis veritatis! Est, fugit fuga deleniti, corrupti
+            maxime quae mollitia autem culpa vitae, dolorem beatae perferendis
+            voluptates totam.<br /><br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nostrum
+            atque quam debitis veritatis! Est, fugit fuga deleniti, corrupti
+            maxime quae mollitia autem culpa vitae, dolorem beatae perferendis
+            voluptates totam.
+          </p>
+        </div>
+        <div class="btn">
+          <button class="btn-1">Add to card</button>
+          <button class="btn-2">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>
