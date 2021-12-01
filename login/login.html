@@ -28,6 +28,7 @@
       display: flex;
       justify-content: space-between;
 
+
     }
 
     .left {
@@ -58,7 +59,7 @@
     }
 
     .right {
-      padding: 30px 20px;
+      padding: 30px;
       width: 55%;
 
     }
@@ -68,7 +69,7 @@
 
     }
 
-    /* Full-width input fields */
+
     input[type=text],
     input[type=password] {
       width: 100%;
@@ -79,14 +80,14 @@
       background: #f1f1f1;
     }
 
-    /* Add a background color when the inputs get focus */
+
     input[type=text]:focus,
     input[type=password]:focus {
       background-color: #ddd;
       outline: none;
     }
 
-    /* Set a style for all buttons */
+
     button {
       background-color: rgb(235, 136, 125);
       color: white;
@@ -108,12 +109,13 @@
       }
 
       .card {
-        width: 100%;
+        width: 90%;
+        margin: 30px auto;
 
       }
 
       .right {
-        width: 100%;
+        width: 90%;
         margin: 0 30px;
         font-size: 1em;
       }
@@ -135,13 +137,11 @@
 
         <h1>Sign Up</h1>
         <div class="container">
-          <!-- <label for="email"><b>Email</b></label> -->
+
           <input type="text" placeholder="Enter Email" name="email" required>
-          <!-- 
-      <label for="psw"><b>Password</b></label> -->
           <input type="password" placeholder="Enter Password" name="psw" required>
 
-          <!-- <label for="psw-repeat"><b>Repeat Password</b></label> -->
+
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
           <label>
@@ -149,9 +149,10 @@
           </label>
         </div>
         <p>By creating an account you agree to our <a href="#"
-            style="color:rgb(235, 136, 125) ;text-decoration: none;">Terms & Privacy</a>.</p>
+            style="color:rgb(235, 136, 125) ;text-decoration: none;">Terms &
+            Privacy</a>.</p>
 
-        <div class="clearfix">
+        <div>
           <button type="submit" class="signupbtn">Sign Up</button>
         </div>
 
@@ -159,7 +160,6 @@
     </div>
 
 
-    <script src="script.js"> </script>
 </body>
 
 </html>

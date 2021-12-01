@@ -20,131 +20,126 @@
 
     <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: rgb(8, 7, 7);
-        }
-        .container{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            padding: 60px 0;
-        }
-        .movie{
-            width: 320px;
-            height: 600px;
-            background-color: #040405;
-            display: flex;
-            flex-direction: column;
-            border-radius: 3px;
-            box-shadow: 0 0 20px rgb(12, 11, 11);
-            margin:  0 20px 20px 20px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(8, 7, 7);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 0;
+      }
+      .movie {
+        width: 320px;
+        height: 600px;
+        background-color: #040405;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3px;
+        box-shadow: 0 0 20px rgb(12, 11, 11);
+        margin: 0 20px 20px 20px;
+      }
+      .movie-image-1 {
+        background: url("up.jpg");
+        height: 300px;
+      }
+      .movie-image-2 {
+        background: url("bat.jpg");
+        height: 300px;
+      }
+      .movie-image-3 {
+        background: url("image.jpg");
+        height: 300px;
+      }
+      .movie-image {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-size: cover;
+        background-blend-mode: screen;
+      }
+      .movie-image span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        font-size: 1.5rem;
+      }
+      .movie-info {
+        color: #bbb;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-        
-        }
-        .movie-image-1{
-            background: url('up.jpg');
-            height: 300px;
-        }
-        .movie-image-2{
-            background: url('bat.jpg');
-            height: 300px;
-        }
-        .movie-image-3{
-            background: url('image.jpg');
-            height: 300px;
-        }
-        .movie-image{
-            width: 100%;
-            height: 100%;
-            position: relative;
-            background-size: cover;
-            background-blend-mode: screen;
-        }
-        .movie-image span{
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 10px;
-            font-size: 1.5rem;
-        }
-        .movie-info{
-            color: #bbb;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-           
-            padding: 15px;
-        }
-        .title{
-            font-size: 2rem;
-        }
-        .genres{
-            font-size:0.8rem;
-            color: gray;
-            margin-top: -20px;
-        }
-        .movie-text{
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-        }
-        .movie-text p:nth-child(1){
-            font-size:0.8rem;
-        }
-        .movie-like{
-color:#f44336;
-font-size:0.8rem;
-        }
-        .movie-like span{
-            margin-left: 10px;
-        }
-        .summary{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
-            margin: 5px 0;
-        }
-        .text{
-            font-size: 0.7rem;
-            color: gray;
-            margin-bottom: 5px;
-        }
-        .cast{
-            font-size: 0.7rem;
-            font-style: italic; 
-            color: #bbb;  
-        }
-        .actions{
+        padding: 15px;
+      }
+      .title {
+        font-size: 2rem;
+      }
+      .genres {
+        font-size: 0.8rem;
+        color: gray;
+        margin-top: -20px;
+      }
+      .movie-text {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+      }
+      .movie-text p:nth-child(1) {
+        font-size: 0.8rem;
+      }
+      .movie-like {
+        color: #f44336;
+        font-size: 0.8rem;
+      }
+      .movie-like span {
+        margin-left: 10px;
+      }
+      .summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin: 5px 0;
+      }
+      .text {
+        font-size: 0.7rem;
+        color: gray;
+        margin-bottom: 5px;
+      }
+      .cast {
+        font-size: 0.7rem;
+        font-style: italic;
+        color: #bbb;
+      }
+      .actions {
         display: flex;
         justify-content: space-between;
         margin: 10px 0;
-
-        }
-        button{
-            padding: 3px 8px;
-            background: transparent;
-            border: 1px solid  #f44336;
-            color:#f44336;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-        .action-more i{
-            margin-right: 10px;
-            font-size: 1rem;
-            margin-top:10px;
-
-        }
+      }
+      button {
+        padding: 3px 8px;
+        background: transparent;
+        border: 1px solid #f44336;
+        color: #f44336;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .action-more i {
+        margin-right: 10px;
+        font-size: 1rem;
+        margin-top: 10px;
+      }
     </style>
-    
   </head>
   <body>
     <div class="container">
@@ -159,7 +154,7 @@ font-size:0.8rem;
             <p>SUMMARY</p>
             <div class="movie-like">
               <span><i class="fas fa-thumbs-up"></i> 123</span>
-              <span><i class="fas fa-comment"></i>  5</span>
+              <span><i class="fas fa-comment"></i> 5</span>
             </div>
           </div>
           <div class="summary">
@@ -171,17 +166,17 @@ font-size:0.8rem;
               fuga nam totam, labore nesciunt voluptatum.
             </p>
             <p class="cast">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
             </p>
           </div>
           <div class="actions">
-          <button><i class="fas fa-play"></i>  Watch Trailer</button>
-          <div class="action-more">
-            <i class="fas fa-save"></i>
-            <i class="fas fa-bookmark"></i>
-            <i class="fas fa-share-alt"></i>
+            <button><i class="fas fa-play"></i> Watch Trailer</button>
+            <div class="action-more">
+              <i class="fas fa-save"></i>
+              <i class="fas fa-bookmark"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
           </div>
-        </div>
         </div>
       </div>
       <div class="movie">
@@ -195,7 +190,7 @@ font-size:0.8rem;
             <p>SUMMARY</p>
             <div class="movie-like">
               <span><i class="fas fa-thumbs-up"></i> 123</span>
-              <span><i class="fas fa-comment"></i>  5</span>
+              <span><i class="fas fa-comment"></i> 5</span>
             </div>
           </div>
           <div class="summary">
@@ -207,17 +202,17 @@ font-size:0.8rem;
               fuga nam totam, labore nesciunt voluptatum.
             </p>
             <p class="cast">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
             </p>
           </div>
           <div class="actions">
-          <button><i class="fas fa-play"></i>  Watch Trailer</button>
-          <div class="action-more">
-            <i class="fas fa-save"></i>
-            <i class="fas fa-bookmark"></i>
-            <i class="fas fa-share-alt"></i>
+            <button><i class="fas fa-play"></i> Watch Trailer</button>
+            <div class="action-more">
+              <i class="fas fa-save"></i>
+              <i class="fas fa-bookmark"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
           </div>
-        </div>
         </div>
       </div>
       <div class="movie">
@@ -231,7 +226,7 @@ font-size:0.8rem;
             <p>SUMMARY</p>
             <div class="movie-like">
               <span><i class="fas fa-thumbs-up"></i> 123</span>
-              <span><i class="fas fa-comment"></i>  5</span>
+              <span><i class="fas fa-comment"></i> 5</span>
             </div>
           </div>
           <div class="summary">
@@ -243,17 +238,17 @@ font-size:0.8rem;
               fuga nam totam, labore nesciunt voluptatum.
             </p>
             <p class="cast">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat  
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
             </p>
           </div>
           <div class="actions">
-          <button><i class="fas fa-play"></i>  Watch Trailer</button>
-          <div class="action-more">
-            <i class="fas fa-save"></i>
-            <i class="fas fa-bookmark"></i>
-            <i class="fas fa-share-alt"></i>
+            <button><i class="fas fa-play"></i> Watch Trailer</button>
+            <div class="action-more">
+              <i class="fas fa-save"></i>
+              <i class="fas fa-bookmark"></i>
+              <i class="fas fa-share-alt"></i>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>

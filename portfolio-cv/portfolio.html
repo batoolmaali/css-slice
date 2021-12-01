@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: rgb(2, 0, 36);
+      background: linear-gradient(rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 0.5130427170868348) 100%, rgba(0, 212, 255, 1) 100%);
+    }
+
+    .container {
+      margin: auto;
+      padding-left: 90px;
+      padding-right: 90px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /*small*/
+    @media only screen and (min-width: 768px) {
+      .container {
+        width: 750px;
+      }
+    }
+
+    /*medium*/
+    @media only screen and (min-width: 992px) {
+      .container {
+        width: 970px;
+      }
+    }
+
+    /*large*/
+    @media only screen and (min-width: 1200px) {
+      .container {
+        width: 1170px;
+      }
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
+    .col,
+    .col2 {
+      width: 49%;
+    }
+
+    .col3 {
+      width: 61%;
+    }
+
+    .col4 {
+      width: 37%;
+    }
+
+    .col6 {
+      width: 61%;
+    }
+
+    .col5 {
+      width: 37%;
+    }
+
+
+
+    header {
+
+      text-align: center;
+      min-height: 400px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      color: #fff;
+    }
+
+    img {
+      width: 20%;
+      border-radius: 50%;
+      padding: 5px;
+      border: 3px solid white;
+    }
+
+    .about,
+    .skills,
+    .education,
+    .lang,
+    .contact,
+    .exp {
+      padding: 30px;
+      min-height: 350px;
+
+    }
+
+    header h1 {
+      padding-top: 10px;
+    }
+
+    .about {
+      background-color: white;
+    }
+
+    .skills {
+      background-color: #3867c5;
+      color: #f5f5f5;
+    }
+
+    .contact {
+      background-color: #3867c5;
+      color: #f5f5f5;
+    }
+
+    .education {
+      background-color: #3366cc;
+      color: #f5f5f5;
+    }
+
+    .lang {
+      background-color: white;
+    }
+
+    .exp {
+      background-color: white;
+    }
+
+    .lang li,
+    .contact li {
+      padding: 10px;
+    }
+
+    .lang ul li,
+    .contact ul li {
+      padding-bottom: 6px;
+    }
+
+    h2 {
+      padding-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    .skills .content .col-right .bar {
+      margin-bottom: 10px;
+
+    }
+
+    .skills {
+      list-style-type: none;
+
+    }
+
+    .skills li {
+      margin: 20px 0;
+
+    }
+
+    .bar {
+      background-color: #353b48;
+      display: block;
+      height: 8px;
+      margin-top: 10px;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #2187e7b3;
+    }
+
+    .bar span {
+      height: 8px;
+      float: left;
+      background: #40668ab3;
+    }
+
+    .php {
+      width: 90%
+    }
+
+    .react {
+      width: 80%
+    }
+
+    .js {
+      width: 70%
+    }
+
+    .node {
+      width: 65%
+    }
+
+    p {
+      line-height: 30px;
+      font-family: "Niramit", sans-serif;
+      font-size: 15px;
+    }
+
+    .edu {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+      margin-top: 20px;
+
+    }
+
+    .education h4 {
+      font-size: 20px;
+    }
+
+    .education h5,
+    .exp h5 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .contact li i {
+      list-style-type: none;
+      padding-bottom: 10px;
+    }
+
+    @media(max-width:900px) {
+      .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .col,
+      .col2,
+      .col3,
+      .col4,
+      .col5,
+      .col6 {
+        width: 100%;
+      }
+      .edu {
+     flex-direction: column;
+
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+
+
+      <img src="https://th.bing.com/th/id/R.2e4a52126f09800d89085ec106ec3a47?rik=199WWlAHYrDVpA&pid=ImgRaw&r=0"
+        alt="" />
+      <h1>Hi , I am John</h1>
+      <h1>Full Stack Developer</h1>
+    </div>
+
+
+  </header>
+  <section class="container">
+    <div class="row">
+      <div class="col">
+        <div class="about">
+          <h3>Easy Profile</h3>
+          <h2>Responsive PROFILE CARD</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+            saepe, consectetur dolorem error necessitatibus minima magnam? Nam
+            enim alias dolore nemo expedita a magni incidunt iusto, eligendi
+            adipisci quibusdam beatae recusandae, quo tempora eveniet nihil,
+            magnam esse voluptatum praesentium vel.
+          </p>
+        </div>
+      </div>
+
+      <div class="col2">
+        <div class="skills">
+          <h1>My Skills</h1>
+          <li>
+            <h3>Php MySQL</h3>
+            <span class="bar">
+              <span class="php">
+
+              </span>
+            </span>
+          </li>
+          <li>
+            <h3>React js</h3>
+            <span class="bar">
+              <span class="react">
+
+              </span>
+            </span>
+          </li>
+          <li>
+            <h3>Javascript</h3>
+            <span class="bar">
+              <span class="js">
+
+              </span>
+            </span>
+          </li>
+          <li>
+            <h3>node js</h3>
+            <span class="bar">
+              <span class="node">
+
+              </span>
+            </span>
+          </li>
+
+        </div>
+      </div>
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="col3">
+        <div class="education">
+          <h2>Education</h2>
+          <h4>New web Design</h4>
+          <div class="edu">
+            <h5>School of media</h5>
+            <h5>2019 March - November-2021</h5>
+          </div>
+          <p class="des">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            esse expedita dolorum delectus officia, eos vel consequatur libero
+            doloribus atque quo eum soluta non totam suscipit repellat
+            voluptatem! Veniam dolor excepturi deleniti blanditiis voluptatem
+            perspiciatis placeat magnam distinctio dignissimos voluptatum.
+          </p>
+        </div>
+      </div>
+
+      <div class="col4">
+        <div class="lang">
+          <h2>Languages</h2>
+          <ul>
+            <li>Arabic</li>
+            <li>English</li>
+            <li>Arabic</li>
+            <li>English</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="row">
+      <div class="col5">
+        <div class="contact">
+          <h2>Contact</h2>
+
+          <ul>
+            <li><i class="fas fa-map-marker"></i> Amman</li>
+            <li><i class="fas fa-phone"></i> 99999999</li>
+            <li><i class="fas fa-envelope"></i> eee@company.com</li>
+            <li><i class="fas fa-globe"></i> eee@company.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col6">
+        <div class="exp">
+          <h2>Experiences</h2>
+          <div class="edu">
+            <h5>School of media</h5>
+            <h5>2019 March - November-2021</h5>
+          </div>
+          <p class="des">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
+            esse expedita dolorum delectus officia, eos vel consequatur libero
+            doloribus atque quo eum soluta non totam suscipit repellat
+            voluptatem! Veniam dolor excepturi deleniti blanditiis voluptatem
+            perspiciatis placeat magnam distinctio dignissimos voluptatum.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

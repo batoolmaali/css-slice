@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #302d2d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+          margin-top: 100px;
+       padding: 30px;
+       position: relative;
+       flex-wrap: wrap;
+       width: 1100px;
+       display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .card {
+       max-width: 300px;
+      background-color: #fff;
+       position: relative;
+       height: 215px;
+       margin: 30px 10px;
+       padding: 20px 15px;
+       display: flex;
+       flex-direction: column;
+       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+       transition: 0.3s ease-in-out;
+     
+       
+     }
+     .card:hover{
+        height: 340px;
+       
+     }
+     .card .image
+     {
+        width: 260px;
+        height: 300px;
+    
+      top: -60px;
+     margin: auto;
+      position: relative;
+      height: 170px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      z-index: 1;
+   
+     }
+     img {
+       max-width: 100%;
+       
+       border-radius: 4px;
+     }
+     .content{
+position: relative;
+margin-top: -140px;
+text-align: center;
+padding: 10px 15px;
+color: #111;
+visibility: hidden;
+opacity: 0;
+transition: 0.3s ease-in-out;
+     }
+     .card:hover .content{
+        visibility: visible;
+opacity: 1;
+margin-top: -40px;
+  transition-delay: 0.3s;     
+     }
+    </style>
+  </head>
+  <body>
+   
+    <div class="container">
+      
+      <div class="card">
+        <div class="image">
+         
+          <img src="https://images.pexels.com/photos/3740237/pexels-photo-3740237.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+        </div>
+        <div class="content">
+          <h2>card one</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            cumque tenetur quam perferendis maxime impedit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            cumque tenetur quam perferendis maxime impedit.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="card">
+        <div class="image">
+          <img src="https://images.pexels.com/photos/827513/pexels-photo-827513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+        </div>
+        <div class="content">
+          <h2>card two</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            cumque tenetur quam perferendis maxime impedit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            cumque tenetur quam perferendis maxime impedit.
+          </p>
+        </div>
+        
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="https://images.pexels.com/photos/635409/pexels-photo-635409.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" />
+        </div>
+        <div class="content">
+          <h2>card three</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            cumque tenetur quam perferendis maxime impedit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+            cumque tenetur quam perferendis maxime impedit.
+          </p>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

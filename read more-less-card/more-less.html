@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #313131;
+      }
+      .container {
+        position: relative;
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .card {
+        position: relative;
+        width: 300px;
+        padding: 20px;
+        margin: 20px;
+        background-color: #fff;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 20px solid transparent;
+        border-top: 20px solid purple;
+        border-right: 20px solid purple;
+      }
+      .card .icon {
+        margin-top: 10px;
+      }
+      .card .icon img {
+        max-width: 90px;
+      }
+      .card .content {
+        position: relative;
+        height: 215px;
+        overflow: hidden;
+      }
+      h3 {
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      p {
+        font-weight: 300;
+        color: #333;
+      }
+      .card .more {
+        position: relative;
+        padding: 10px 15px;
+        background-color: purple;
+        margin-top: 15px;
+        display: inline-block;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      .card .more::before {
+        content: "read more";
+      }
+      .card.active .more::before {
+        content: "read less";
+      }
+      .card.active .more {
+        background-color: rgb(238, 238, 68);
+        color: #333;
+      }
+      .card.active::before {
+        border-top: 20px solid rgb(238, 238, 68);
+        border-right: 20px solid rgb(238, 238, 68);
+      }
+      .card.active .content {
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="icon">
+          <img src="a-1.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Web & Mobile Developement</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+            praesentium. Soluta culpa ipsum ipsa ullam praesentium fuga qui
+            ducimus ratione sint quis fugiat delectus ab porro doloribus, rem
+            veniam, laborum enim ex nostrum, et consectetur facere dignissimos
+            nobis nisi. Autem cumque quod ratione earum inventore. Reprehenderit
+            quas ab eum optio, esse enim ducimus autem pariatur ad delectus
+            quisquam ut consequuntur
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="c-2.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Customer Support</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+            praesentium. Soluta culpa ipsum ipsa ullam praesentium fuga qui
+            ducimus ratione sint quis fugiat delectus ab porro doloribus, rem
+            veniam, laborum enim ex nostrum, et consectetur facere dignissimos
+            nobis nisi. Autem cumque quod ratione earum inventore. Reprehenderit
+            quas ab eum optio, esse enim ducimus autem pariatur ad delectus
+            quisquam ut consequuntur
+          </p>
+        </div>
+        <a class="more"> </a>
+      </div>
+      <div class="card">
+        <div class="icon">
+          <img src="c-3.png" alt="" />
+        </div>
+        <div class="content">
+          <h3>Marketing & Communication</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+            praesentium. Soluta culpa ipsum ipsa ullam praesentium fuga qui
+            ducimus ratione sint quis fugiat delectus ab porro doloribus, rem
+            veniam, laborum enim ex nostrum, et consectetur facere dignissimos
+            nobis nisi. Autem cumque quod ratione earum inventore. Reprehenderit
+            quas ab eum optio, esse enim ducimus autem pariatur ad delectus
+            quisquam ut consequuntur
+          </p>
+        </div>
+        <a class="more"></a>
+      </div>
+    </div>
+    <script>
+      let more = document.querySelectorAll(".more");
+      for (let index = 0; index < more.length; index++) {
+        more[index].addEventListener("click", function () {
+          more[index].parentNode.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
+</html>

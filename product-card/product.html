@@ -30,7 +30,7 @@
         background-color: #ddd;
       }
 
-      .container {
+      .container-b {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -38,12 +38,15 @@
         padding: 60px 0;
         height: 100vh;
         width: 80vw;
+        margin: auto;
+      
       }
       .cardd {
         width: 90%;
         height: 100%;
         border-radius: 8px;
         display: flex;
+        justify-content: center;
         margin: auto;
         box-shadow: 0 0 10px 1px rgb(0, 0, 0, 0.2);
         background-color: #fff;
@@ -81,21 +84,23 @@
       .btn-2 {
         width: 45%;
         background-color: transparent;
-        border: 2px solid black;
+        border: 2px solid #333;
         border-radius: 4px;
       }
       .btn-1 {
         width: 45%;
 
-        background-color: rgb(20, 20, 20);
+        background-color: #333;
         color: white;
-        border: 2px solid black;
+        border: 2px solid #333;
         border-radius: 4px;
       }
       @media only screen and (max-width: 992px) {
+       
         .cardd {
           width: 100%;
           flex-direction: column;
+         
         }
         .cardd .image,
         .cardd .info {
@@ -115,7 +120,7 @@
       }
     </style>
   </body>
-  <div class="container">
+  <div class="container-b">
     <div class="cardd">
       <div class="image">
         <img src="product1.jpg" alt="" />

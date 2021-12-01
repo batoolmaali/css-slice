@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+      }
+      body {
+        background-color: #bedfe8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        max-width: 800px;
+      }
+      .container .contentBox {
+        position: relative;
+        margin: 10px 20px;
+      }
+      .container .contentBox .label {
+        position: relative;
+        padding: 10px;
+        background-color: #2694af;
+        color: #fff;
+        cursor: pointer;
+      }
+      .container .contentBox .label::before {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 1.5em;
+      }
+      .container .contentBox.contentBox.active .label::before {
+        content: "-";
+      }
+      .container .contentBox .content {
+        position: relative;
+        padding: 10px;
+        background-color: #fff;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        overflow-y: auto;
+        visibility: hidden;
+      }
+      .container .contentBox.active .content {
+        height: 150px;
+        padding: 10px;
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="contentBox">
+        <div class="label">List one</div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            consectetur corrupti, sit similique reprehenderit culpa
+            necessitatibus cum ex maiores quidem esse, tempora deserunt ipsum
+            quo minima. Inventore quisquam nulla natus earum velit? Quisquam
+            nulla delectus, sequi maxime ad cupiditate ut. At quibusdam debitis,
+            mollitia ut quisquam aut eos voluptates vel accusantium Perspiciatis
+            accusamus sint et
+          </p>
+        </div>
+      </div>
+      <div class="contentBox">
+        <div class="label">List Two</div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            consectetur corrupti, sit similique reprehenderit culpa
+            necessitatibus cum ex maiores quidem esse, tempora deserunt ipsum
+            quo minima. Inventore quisquam nulla natus earum velit? Quisquam
+            nulla delectus, sequi maxime ad cupiditate ut. At quibusdam debitis,
+            mollitia ut quisquam aut eos voluptates vel accusantium Perspiciatis
+            accusamus sint et
+          </p>
+        </div>
+      </div>
+      <div class="contentBox">
+        <div class="label">List Three</div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+            consectetur corrupti, sit similique reprehenderit culpa
+            necessitatibus cum ex maiores quidem esse, tempora deserunt ipsum
+            quo minima. Inventore quisquam nulla natus earum velit? Quisquam
+            nulla delectus, sequi maxime ad cupiditate ut. At quibusdam debitis,
+            mollitia ut quisquam aut eos voluptates vel accusantium Perspiciatis
+            accusamus sint et
+          </p>
+        </div>
+      </div>
+      <div class="contentBox">
+        <div class="label">List Four</div>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+            modi rem nobis ipsa unde sit molestiae eveniet iste, suscipit
+            adipisci qui nulla amet veritatis obcaecati.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const container = document.getElementsByClassName("contentBox");
+      for (let index = 0; index < container.length; index++) {
+        container[index].addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
+</html>

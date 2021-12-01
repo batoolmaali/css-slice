@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+               * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins', sans-serif;
+            
+        }
+        body{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            min-height:100vh;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            margin: 50px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+        }
+        .container .left{
+            position: relative;
+            background: #003147;
+            padding: 40px;
+        }
+        .container .right{
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+        .profile{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .profile .image{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            overflow:hidden ;
+        }
+        .profile .image img{
+            max-width: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            object-fit: cover;
+        }
+        .profile h2{
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.4em;
+        }
+        .profile h2 span{
+            font-size: 0.8em;
+            font-weight: 200;
+        }
+        .contact{
+            padding-top: 40px;
+        }
+        .contact .title{
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .contact ul{
+            position: relative;
+
+        }
+        .contact ul li{
+            list-style: none;
+            position: relative;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .contact ul li .icon{
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: #03a9f4;
+        }
+        .contact ul li .text{
+            color: #fff;
+            font-weight: 300;
+        }
+        .contact.education li{
+margin-bottom: 20px;
+line-height: 1.5em;
+        }
+        .contact.education h5{
+       color:#03a9f4;
+       font-weight: 500;
+        }
+        .contact.education h4{
+        color:#fff;
+        font-weight: 500;
+
+        }
+     
+        .container .right{
+            position: relative;
+            background-color: #fff;
+            padding: 40px;
+        }
+        .about{
+            margin-bottom: 50px;
+        }
+        .about:last-child{
+            margin-bottom: 0;
+        }
+        .title2{
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .about p{
+            color: #333;
+            line-height: 1.4rem;
+
+        }
+        .about .box{
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+        .about .box .company{
+            min-width: 150px;
+        }
+        .about .box .company h5{
+            text-transform: uppercase;
+            color: #848c90;
+            font-weight: 600;
+            line-height: 1.4rem;
+        }
+        .about .box .text h4{
+            text-transform: uppercase;
+            color: #2a7da2;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .skills h4{
+           text-transform: uppercase;
+           color: #848c99;
+           font-weight: 500;
+        }
+        .skills .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background-color: #f0f0f0;
+        }
+        .skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #03a9f4;
+        }
+        @media (max-width:1000px){
+            .container{
+                margin: 10px;
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+        @media (max-width:600px){
+            .about .box{
+                flex-direction: column;
+            }
+            .about .box .company{
+               
+               margin-bottom: 5px;
+            }
+            .skills .box{
+                grid-template-columns: repeat(1,1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+   <div class="container">
+       <div class="left">
+<div class="profile">
+    <div class="image">
+        <img src="https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0" alt="">
+
+    </div>
+    <h2>Johnnn Deooo<br><span>Web Developer</span></h2>
+</div>
+
+<div class="contact">
+    <h3 class="title">
+        Contact Info
+    </h3>
+    <ul>
+        <li><span class="icon"><i class="fab fa-linkedin"></i></span>
+            <span class="text">www.Linkedin.com/me</span>
+        </li>
+        <li><span class="icon"><i class="fas fa-phone"></i> </span>  <span class="text">99999999</span></li>
+        <li><span class="icon"><i class="fas fa-envelope"></i></span> <span class="text">John-Deo@email.com</span></li>
+        <li><span class="icon"><i class="fas fa-globe"></i></span> <span class="text">www.mywebsite.com</span> </li>
+      </ul>
+</div>
+<div class="contact education">
+    <h3 class="title">
+       Education
+    </h3>
+    <ul>
+      <li><h5>2010-2013</h5>
+    <h4>Mster Degree in Computer Science</h4>
+<h4>University Name</h4>
+
+</li>
+<li><h5>2007-2010</h5>
+    <h4>Bachelor Degree in Computer Science</h4>
+<h4>University Name</h4>
+
+</li>
+      </ul>
+</div>
+<div class="contact languages">
+    <h3 class="title">
+       Languages
+    </h3>
+    <ul>
+   <li>
+       <span class="text">English</span>
+       <span class="percent">
+
+       </span>
+       
+   </li>
+   <li>
+    <span class="text">Arabic</span>
+    <span class="percent">
+
+    </span>
+    
+</li>
+<li>
+    <span class="text">Spanish</span>
+    <span class="percent">
+
+    </span>
+    
+</li>
+      </ul>
+</div>
+       </div>
+       <div class="right">
+
+        <div class="about">
+            <h2 class="title2">
+                Profile
+            </h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+           
+            Impedit corrupti doloribus quam excepturi doloremque nam asperiores molestias,
+             distinctio, cupiditate soluta consectetur, omnis accusamus. Perspiciatis ad beatae dolore,
+             hic dicta aspernatur vitae praesentium reiciendis velit, necessitatibus corporis sit culpa
+              esse ab laboriosam, facere natus odit ullam quo. Nemo quis officia voluptatem<br><br> Adipisci rerum 
+              facere quibusdam aliquid quia impedit recusandae minus facilis aut porro, non reiciendis
+               blanditiis, quidem sapiente? Recusandae fugiat sed veniam? Harum minima molestiae pariatur
+                doloribus ex est dignissimos neque ut quibusdam nam</p>
+        </div>
+        <div class="about">
+            <h2 class="title2">
+                Experience
+            </h2> 
+            <div class="box">
+                <div class="company">
+                    <h5>2019 - Present</h5>
+                    <h5>Cmpany Name</h5>
+                </div>
+                <div class="text">
+                    <h4>Senior UX Designer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates repellat tempora ipsam officiis voluptas recusandae, minima reiciendis cum voluptatibus.</p>
+                </div>
+            </div>
+         
+            <div class="box">
+                <div class="company">
+                    <h5>2016 - 2019</h5>
+                    <h5>Cmpany Name</h5>
+                </div>
+                <div class="text">
+                    <h4> UX/UI Designer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates repellat tempora ipsam officiis voluptas recusandae, minima reiciendis cum voluptatibus.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="company">
+                    <h5>2014 - 2016</h5>
+                    <h5>Cmpany Name</h5>
+                </div>
+                <div class="text">
+                    <h4>Junior UX Designer</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates repellat tempora ipsam officiis voluptas recusandae, minima reiciendis cum voluptatibus.</p>
+                </div>
+            </div>
+        </div>
+        <div class="about skills">
+            <h2 class="title2">
+               Professional  Skills
+            </h2>
+            <div class="box">
+                <h4>Html</h4>
+                <div class="percent">
+                    <div style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Css</h4>
+                <div class="percent">
+                    <div style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Javascript</h4>
+                <div class="percent">
+                    <div style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>React</h4>
+                <div class="percent">
+                    <div style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="box">
+                <h4>Node</h4>
+                <div class="percent">
+                    <div style="width: 80%;"></div>
+                </div>
+            </div>
+        </div>
+      
+       </div>
+   </div> 
+</body>
+</html>

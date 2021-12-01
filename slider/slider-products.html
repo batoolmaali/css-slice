@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slider {
+        height: 320px;
+        margin: 40px auto;
+        position: relative;
+        width: 90%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      .slide-track {
+        display: flex;
+        width: calc(330px * 8);
+        animation: scroll 40s linear infinite;
+      }
+      .slide {
+        width: 300px;
+        height: 300px;
+
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        perspective: 100px;
+      }
+      .slide img {
+        width: 100%;
+        transition: transform 1s;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translatex(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 4));
+        }
+      }
+      .slide-track:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <p
+      class="sli"
+      style="
+        color: #192b42;
+        text-align: center;
+        font-size: 40px;
+        margin-top: 100px;
+      "
+    >
+      Popular Destination
+    </p>
+    <div class="slider">
+      <div class="slide-track">
+        <div class="slide">
+          <img src="images/0e627c12c05e4dd93ab122d618ea7849.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/d0d3c14bcbc45aa90ea02bdc03f02ea4.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/5d40bbbb6c3b84fc15e05f4b0dc2cc91.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/f5932585e03b3180bf0f1d4804507da0.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/4c5d363d3be216141df83b36fea6a3a1.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/b895980a319aaa068ccb6d9bb4c5724e.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/aaf5a98603229938f2b7ab84fe0a78ee.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/f21e7489ba5c11686307a233a2306eaf.jpg" />
+        </div>
+        <div class="slide">
+          <img src="images/ffda4bdcc5e7b812aff3e357b87ccc92.jpg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'arial', sans-serif;
+            text-decoration: none;
+            
+        }
+        section{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+
+        }
+        section header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+        section header ul{
+            list-style: none;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+        }
+        section header ul li{
+            margin-left: 20px;
+
+        }
+        section header ul li a{
+           color: #111;
+           text-decoration: none;
+           font-size: 13px;
+            
+        }
+        section header ul li button{
+           border: none;
+           background: #4584ef;
+           outline: none;
+           padding: 8px 14px;
+           color: #fff;
+           font-size: 14px;
+           border-radius: 3px;
+           font-weight: 700;
+           cursor: pointer;
+            
+        }
+        section .main{
+          width: 580px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        section .main .searchBox{
+            position: relative;
+            width: 100%;
+            margin-top: 20px;
+
+        }
+        section .main .search{
+            width: 100%;
+            padding: 13px;
+            padding-left: 40px;
+            padding-right: 60px;
+            border-radius: 30px;
+            border: 1px solid #ccc;
+            outline: none;
+            font-size: 16px;
+        }
+       section .main .searchBox .icons{
+           position: absolute;
+           top: 0;
+           width: 100%;
+           display: flex;
+           padding: 14px 20px;
+           justify-content: space-between;
+           align-items: center;
+
+       }
+       section .main .btn{
+margin-top: 20px;
+
+       }
+       section .main .btn button{
+           margin: 0 5px;
+           padding: 12px 20px;
+           color: #555;
+           font-size: 14px;
+           border: none;
+           cursor: pointer;
+           border-radius: 4px;
+           border: 1pxsolid transparent;
+           outline: none;
+       }
+       section .main .btn button:hover{
+        border: 1px solid #ccc;
+ 
+       }
+       .lang{
+           display: flex;
+           margin-top: 30px;
+       }
+       .lang li{
+           list-style: none;
+           margin: 0 5px;
+           font-size:14px ;
+       }
+       .lang li a{
+           text-decoration: none;
+       }
+       img{
+           width: 50%;
+       }
+       @media (max-width:992px){
+           section{
+               width: 90%;
+           }
+         
+           section .main{
+            width: 100%;
+            margin: auto auto auto 25px;
+           }
+       }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <ul>
+                <li><a href="">Gmail</a></li>
+                <li><a href="">Images</a></li>
+                <li><a href=""> <i class="fas fa-grip-vertical"></i></li>
+                <li><button>Sign In</button></li>
+
+
+
+            </ul>
+        </header>
+        <div class="main">
+            <img src="google-image.png" alt="">
+            <div class="searchBox">
+                <input type="text" class="search" >
+                <div class="icons">
+                   <div><i class="fas fa-search"></i></div> 
+                   <div><i class="fas fa-microphone-alt"></i></div> 
+                </div>
+                
+            </div>
+            <div class="btn">
+                <button>Google Search</button>
+                <button>I'm Feelling lucky</button>
+
+            </div>
+            <div class="lang">
+                <li>Google offered in:</li>
+                <li>Arabic</li>
+                <!-- <li>English</li> -->
+            </div>
+        </div>
+        <div class="footer">
+
+        </div>
+    </section>
+</body>
+</html>

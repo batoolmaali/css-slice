@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="personal assisstant..">
+    <meta http-equiv="refresh" content="30">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bootstrap, Ubuntu, linux, Web Developer, calculater">
+    <meta property="og:description" content="personal,assisstant">
+    <meta name=”robots” content=”index, follow”>
+
+    <style>
+        #bodycal {
+            background-color: #f1ebeb;
+
+
+        }
+
+        #div1 {
+            background-color: #333;
+            width: 450px;
+            height: 500px;
+            margin: auto auto;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        #container {
+            width: 90%;
+            margin: 10px auto;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        #types {
+            width: 100%;
+            height: 60px;
+            background-color: #D9D9D9;
+            border-radius: 10px;
+            font-size: 30px;
+            box-shadow: 2px 2px black;
+        }
+
+        #clear {
+            width: 180px;
+            height: 50px;
+            background-color: orange;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            box-shadow: 4px 4px black;
+        }
+
+        .one {
+            width: 100px;
+            height: 50px;
+            background-color: #D9D9D9;
+            margin-right: 5px;
+            margin-top: 20px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            box-shadow: 3px 3px black;
+            cursor: pointer;
+        }
+
+
+
+        #div3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            width: 100%;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        @media (max-width:992) {
+
+            .div1 {
+                width: 80%;
+            }
+
+            .container {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    ​
+
+    <div id="div1">
+        <div id="container">
+            <input type="text" id="types">
+            ​
+            <div id="div3">
+                <div><input type="button" class="one" value="7"></div>
+                <div><input type="button" class="one" value="8"></div>
+                <div><input type="button" class="one" value="9"></div>
+                <div><input type="button" class="one" value="*"></div>
+            </div>
+
+            <div id="div3">
+                <div><input type="button" class="one" value="6"></div>
+                <div><input type="button" class="one" value="5"></div>
+                <div><input type="button" class="one" value="4"></div>
+                <div><input type="button" class="one" value="-"></div>
+            </div>
+
+
+            <div id="div3">
+                <div><input type="button" class="one" value="3"></div>
+                <div><input type="button" class="one" value="2"></div>
+                <div><input type="button" class="one" value="1"></div>
+                <div><input type="button" class="one" value="+"></div>
+            </div>
+
+
+            <div id="div3">
+                <div><input type="button" class="one" value="0"></div>
+                <div><input type="button" class="one" value="/"></div>
+                <div><input type="button" class="one" value="."></div>
+                <div><input type="button" class="one" value="=" id="equal"></div>
+            </div>
+
+            <div id="div3">
+                <div> <input type=" button" class="one" value="x!" id="factorial"></div>
+                <div> <input type=" button" class="one" value="abs" id="absolute"></div>
+                <div> <input type=" button" id="clear" value="clear"></div>
+            </div>
+
+        </div>
+    </div>
+    <!--container end-->
+
+
+
+</body>
+
+
+<script>
+    let mynumbers = document.getElementsByClassName("one"),
+        myvalue = document.getElementById("types"),
+        equal = document.getElementById("equal"),
+        myclear = document.getElementById("clear"),
+        factorial = document.getElementById("factorial"),
+        absolute = document.getElementById("absolute"),
+        i;
+
+    for (i = 0; i < mynumbers.length; i++) {
+        mynumbers[i].onclick = function () {
+
+            myvalue.value += this.value
+
+            console.log(myvalue.value)
+
+        }
+    }
+
+
+    myclear.onclick = () => {
+        myvalue.value = ""
+    }
+
+    equal.onclick = () => {
+        myvalue.value = eval(myvalue.value)
+    }
+
+    factorial.onclick = () => {
+        var x = myvalue.value;
+        var fact = 1;
+        for (var i = 1; i <= x; i++) {
+            fact = fact * i
+        }
+        myvalue.value = fact;
+
+    }
+    absolute.onclick = () => {
+        myvalue.value = Math.abs(myvalue.value);
+    }
+
+</script>
+
+</html>

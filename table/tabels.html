@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+            
+        }
+        body{
+            font-family:Mukta , sans-serif;
+            height:100vh;
+            display:grid;
+            justify-content: center;
+            align-items: center;
+            color:#333;
+            background-color:#efefef;
+
+        }
+        table{
+            border-collapse: collapse;
+            box-shadow: 0 5px 10px #ccc;
+            background-color: white;
+            text-align: center;
+
+        }
+        thead{
+            box-shadow: 0 5px 10px #ccc;
+            background-color: #333;
+            color: #fff;
+
+        }
+        th{
+            padding: 20px 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+        }
+        td{
+            padding:10px;
+        }
+        .btn{
+            border-radius: 5px;
+            color: #D8000C;
+	        background-color: #FFBABA;
+            padding: 10px;
+            text-align: center;
+            border: none;
+
+        }
+        .btn2{
+            border-radius: 5px;
+            color: #fff;
+	        background-color: rgb(63, 63, 247);
+            padding: 10px;
+            text-align: center;
+            border: none;
+
+        }
+        tr:nth-child(even){
+            background-color: rgb(245, 241, 241);
+        }
+        
+
+    
+    </style>
+</head>
+<body>
+   <table>
+       <thead>
+           <tr>
+           <th>product ID</th>
+           <th>product Name</th>
+           <th> product Price</th>
+           <th> Update </th>
+           <th> Delete </th>
+          
+        </tr>
+       </thead>
+       <tbody>
+           <tr>
+<td>1</td>
+<td>IRISES</td>
+<td>$ 30.00</td>
+<td><button class="btn2">Update</button></td>
+<td><button class="btn">Delete</button></td>
+
+</tr>
+<tr>
+    <td>2</td>
+    <td>LILIES</td>
+    <td>$ 16.99</td>
+    <td><button class="btn2">Update</button></td>
+    <td><button class="btn">Delete</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>VIOLETS</td>
+        <td>$ 55.00</td>
+        <td><button class="btn2">Update</button></td>
+        <td><button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>NARCISSUSES</td>
+            <td>$ 25.00</td>
+            <td><button class="btn2">Update</button></td>
+            <td><button class="btn">Delete</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>TULIPS</td>
+                <td>$ 30.00</td>
+                <td><button class="btn2">Update</button></td>
+               <td><button class="btn">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>WHITE ROSES</td>
+                    <td>$ 18.50</td>
+                    <td><button class="btn2">Update</button></td>
+                   <td><button class="btn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>PEONIES</td>
+                        <td>$ 20.00</td>
+                        <td><button class="btn2">Update</button></td>
+                        <td><button class="btn">Delete</button></td>
+                        </tr>
+    
+     
+           
+       </tbody>
+   </table> 
+</body>
+</html>

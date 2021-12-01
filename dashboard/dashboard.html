@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+    <style>
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Poppins', sans-serif;
+            
+        }
+        .body{
+            min-height:100vh;
+        }
+
+        .side-menue{
+            background-color:black;
+            color:#f1f1f1;
+            position: fixed;
+            width: 20vw;
+            min-height: 100vh;
+            display: flex;
+           
+            flex-direction: column;
+        }
+        a{
+            text-decoration:none;
+        }
+        li{
+            list-style-type:none
+        }
+        h1{
+color:#fff;
+font-size: 25px;
+        }
+        .side-menue .name{
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .side-menue li{
+            font-size: 20px;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+        }
+        .side-menue li:hover{
+            background-color: #f1f1f1;
+            color: black;
+            cursor: pointer;
+        }
+        .container{
+            position: absolute;
+            right: 0;
+            width: 80vw;
+            height: 100vh;
+            background-color: #f1f1f1;
+
+        }
+        .container .header{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80vw;
+            height: 10vh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .container .header .nav{
+            width: 90%;
+            display: flex;
+            align-items: center;
+
+        }
+        .container .header .nav .search{
+            flex: 3;
+            
+            display: flex;
+           justify-content: center;
+
+        }
+        .container .header .nav .search input[type="text"]{
+            border: none;
+            background-color: #f1f1f1;
+            padding: 10px;
+            width: 50%;
+            margin: 0 5px;
+
+        }
+        .container .header .nav .search button{
+            border: none;
+            color: #f1f1f1;
+            background-color: black; 
+            width: 70px;
+            height: 40px;
+            cursor: pointer;
+            border-radius: 5px;
+
+        }
+        .container .header .nav .user{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+            
+        }
+         
+        .btn{
+            background-color: black;
+            color: #f1f1f1;
+            padding:  10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+      
+        .container .header .nav .user-img{
+            position: relative;
+            width: 40px;
+            height: 40px;
+            
+
+        }
+        .container .header .nav .user .user-img img{
+            position: absolute;
+            top:0;
+            left: 0;
+            width:100%;
+            height:100%;
+            
+
+        }
+        .container .content{
+         position: relative;
+         margin-top: 9vh;
+         min-height: 90vh;
+         background-color: #f1f1f1;
+        }
+
+        .container .content .cards{
+         padding: 20px 15px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         flex-wrap: wrap;
+        }
+
+        .container .content .cards .card{
+         width: 250px;
+         height: 130px;
+         background-color: white;
+         margin: 20px 5px;
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .container .content .cards .card  .box {
+         width: 50%;
+        }
+        .container .content .cards .card  .box h3{
+         color: #333;
+        }
+        
+        .container .content .cards .card  .icon {
+         width: 30%;
+        }
+        .container .content .cards .card  .icon img{
+         width: 80%;
+        }
+        .container .content .content-2{
+          min-height:55vh;
+         
+          display: flex;
+         align-items: flex-start;
+         justify-content: space-around;
+         flex-wrap:wrap;
+         
+        }
+        .container .content .content-2 .payment{
+          min-height:53vh;
+          /* width: 60%; */
+          flex: 5;
+         background:white;
+         margin:0 25px 25px 25px;
+         display: flex;
+         flex-direction: column;
+         
+        }
+        .container .content .content-2 .new-stu{
+        min-height:50vh;
+         /* width: 30%; */
+         flex: 2;
+         background-color: white;
+         margin:0 25px;
+         display: flex;
+         flex-direction: column;
+        }
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 15px 10px ;
+            border-bottom: 2px solid #999;
+            font-size: 14px;
+        }
+        table{
+            padding: 10px;
+        }
+        th,td{
+            text-align: left;
+            padding: 13px;
+            
+        }
+        @media screen and (max-width:1050px){
+            .side-menue li{
+                font-size: 18px;
+            }
+           
+        }
+        @media screen and (max-width:940px){
+          
+            .side-menue li span{
+                display: none;
+            }
+            .side-menue li{
+                align-items: center;
+            }
+            .user .btn{
+          display: none;
+      }
+        }
+        @media screen and (max-width:540px){
+          
+          .name h1{
+              font-size: 16px;
+             text-align: center;
+        
+      }
+      .container .content .cards{
+          justify-content: center;
+      }
+     
+    
+    }
+        </style>
+</head>
+<body>
+  <div class="side-menue" >
+      <div class="name">
+          <h1>School Name</h1>
+      </div>
+
+      <ul>
+          <li><i class="far fa-calendar-alt"></i> &nbsp; <span>Dashboard</span></li>
+           <li><i class="fas fa-user-graduate"></i>&nbsp; <span>Students</span></li>
+            <li><i class="fas fa-chalkboard-teacher"></i> &nbsp;  <span>Teachers</span></li>
+            <li><i class="fas fa-school"></i> &nbsp;  <span>Schools</span></li>
+             <li><i class="fas fa-search-dollar"></i> &nbsp; <span>Income</span> </li>
+              <li><i class="fas fa-users-cog"></i> &nbsp;  <span>Setting</span></li>
+
+      </ul>
+
+  </div>
+  <div class="container">
+      <!-- header -->
+      <div class="header">
+          <div class="nav">
+              <div class="search">
+                  <input type="text" placeholder=" Search..">
+                  <button type="submit">Search</button>
+              </div>
+              <div class="user">
+                  <a href="#" class="btn">Add New</a>
+                
+                  <i class="far fa-bell fa-2x"></i>
+                  <div class="user-img">
+                      <img src="https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- header -->
+
+      <div class="content">
+          <div class="cards">
+<div class="card">
+    <div class="box">
+        <h2>2194</h2>
+        <h3>Students</h3>
+
+    </div>
+    <div class="icon">
+        <img src="https://th.bing.com/th/id/OIP.zPVVyeCvkVJjKNXas68jVwHaHa?w=196&h=196&c=7&r=0&o=5&pid=1.7" alt="">
+
+    </div>
+</div>
+<div class="card">
+    <div class="box">
+        <h2>2194</h2>
+        <h3>Teachers</h3>
+
+    </div>
+    <div class="icon">
+        <img src="https://th.bing.com/th/id/OIP.16zqIe1LPMcV7nZSOuB-pQHaIi?w=171&h=197&c=7&r=0&o=5&pid=1.7" alt="">
+
+    </div>
+
+</div>
+<div class="card">
+    <div class="box">
+        <h2>100</h2>
+        <h3>Schools</h3>
+
+    </div>
+    <div class="icon">
+        <img src="https://cdn.onlinewebfonts.com/svg/img_532449.png" alt="">
+
+    </div>
+</div>
+<div class="card">
+    <div class="box">
+        <h2>350000</h2>
+        <h3>Income</h3>
+
+    </div>
+    <div class="icon">
+        <img src="https://th.bing.com/th/id/OIP.PaYT-o6ksNMeunnnUQh8qQHaFC?w=283&h=192&c=7&r=0&o=5&pid=1.7" alt="">
+
+    </div>
+</div>
+</div>
+
+
+          <div class="content-2">
+              <div class="payment">
+                  <div class="title">
+                      <h2>Recent Payment</h2>
+                      <a href="" class="btn"> View All</a>
+                  </div>
+                  <table>
+                      <tr>
+                          <th>Name </th>
+                          <th>School</th>
+                          <th>Amount</th>
+                          <th>Option</th>
+                      </tr>
+                      <tr>
+                          <td>
+                              John Deo
+                          </td>
+                          <td>
+                           St. James College
+                        </td>
+                        <td>
+                            $120
+                        </td>
+                        <td>
+                           <a href=""  class="btn">View</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            John Deo
+                        </td>
+                        <td>
+                         St. James College
+                      </td>
+                      <td>
+                          $120
+                      </td>
+                      <td>
+                         <a href=""  class="btn">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            John Deo
+                        </td>
+                        <td>
+                         St. James College
+                      </td>
+                      <td>
+                          $120
+                      </td>
+                      <td>
+                         <a href=""  class="btn">View</a>
+                      </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            John Deo
+                        </td>
+                        <td>
+                         St. James College
+                      </td>
+                      <td>
+                          $120
+                      </td>
+                      <td>
+                         <a href=""  class="btn">View</a>
+                      </td>
+                    </tr>
+                    <!-- <tr>
+                        <td>
+                            John Deo
+                        </td>
+                        <td>
+                         St. James College
+                      </td>
+                      <td>
+                          J$120
+                      </td>
+                      <td>
+                         <a href=""  class="btn">View</a>
+                      </td>
+                    </tr> -->
+                  </table>
+              </div>
+              <div class="new-stu"> 
+                <div class="title">
+                    <h2> New Students</h2>
+                    <a href="" class="btn"> View All</a>
+                </div>
+                <table>
+                    <tr>
+                        <th>Profile</th>
+                        <th>Name</th>
+                        <th>Option</th>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                        
+                                <img  width="40" src="https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0" alt="">
+                           
+                      </td>
+                      <td>    John Deo</td>
+                      <td>  <a href=""  class="btn">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        
+                                <img  width="40" src="https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0" alt="">
+                           
+                      </td>
+                      <td>    John Deo</td>
+                      <td>  <a href=""  class="btn">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        
+                                <img  width="40" src="https://th.bing.com/th/id/R.6b0022312d41080436c52da571d5c697?rik=ejx13G9ZroRrcg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fuser-png-icon-young-user-icon-2400.png&ehk=NNF6zZUBr0n5i%2fx0Bh3AMRDRDrzslPXB0ANabkkPyv0%3d&risl=&pid=ImgRaw&r=0" alt="">
+                           
+                      </td>
+                      <td>    John Deo</td>
+                      <td>  <a href=""  class="btn">View</a></td>
+                    </tr>
+                    </table>
+              </div>
+          </div>
+          
+     
+      </div>
+   
+  </div>
+
+</body>
+</html>

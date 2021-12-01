@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            background-color: #f7cac9;
+            width: 25%;
+            margin: auto;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            width: 100%;
+            margin: auto;
+            margin-top: 5%;
+
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .card {
+
+            text-align: center;
+            padding: 2rem;
+            border-bottom-right-radius: 200px;
+            border-top-left-radius: 200px;
+
+        }
+
+        .c-1 {
+            border: 4px solid #ff6f61;
+        }
+
+        .c-2 {
+            border: 4px solid #92a8d1;
+        }
+
+        .c-3 {
+            border: 4px solid #88b04b;
+        }
+
+        .c-1 img {
+            border: 3px solid #ff6f61;
+        }
+
+        .c-2 img {
+            border: 3px solid #92a8d1;
+        }
+
+        .c-3 img {
+            border: 3px solid #88b04b;
+        }
+
+        .c-1 i {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+
+        .c-2 i {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #92a8d1;
+        }
+
+        .c-3 i {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #88b04b;
+        }
+
+        .name {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .job {
+            text-transform: uppercase;
+            opacity: 0.8;
+            font-size: 14px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width:1000px) {
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+                margin: 50px auto;
+            }
+
+            .header {
+                width: 80%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Our Team</h1>
+    </div>
+    <div class="container">
+        <div class="card c-1">
+            <img src="https://th.bing.com/th/id/OIP.QojVZdsU6y87224riPiwsAHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7" alt="">
+            <i class="fas fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, laudantium eos numquam odit repellat
+                debitis dicta, assumenda ipsum id soluta inventore nobis, doloremque tempora perspiciatis repellendus
+                consectetur asperiores reiciendis placeat!</p>
+            <p class="name">Olivia Smith</p>
+            <p class="job">Director</p>
+
+
+        </div>
+        <div class="card c-2">
+            <img src="data:image/jpeg;base64,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"
+                alt="">
+            <i class="fas fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, laudantium eos numquam odit repellat
+                debitis dicta, assumenda ipsum id soluta inventore nobis, doloremque tempora perspiciatis repellendus
+                consectetur asperiores reiciendis placeat!</p>
+            <p class="name">Olivia Smith</p>
+            <p class="job">Director</p>
+
+
+        </div>
+        <div class="card c-3">
+            <img src="https://th.bing.com/th/id/OIP.n7pw8X3XxZGl9uw_z9OI3QHaHa?w=217&h=217&c=7&r=0&o=5&pid=1.7" alt="">
+            <i class="fas fa-quote-left"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, laudantium eos numquam odit repellat
+                debitis dicta, assumenda ipsum id soluta inventore nobis, doloremque tempora perspiciatis repellendus
+                consectetur asperiores reiciendis placeat!</p>
+            <p class="name">Olivia Smith</p>
+            <p class="job">Director</p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

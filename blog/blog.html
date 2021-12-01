@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .row {
+        font-family: Arial;
+
+        padding: 20px 150px;
+        background-color: #f1f1f1;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .row:after {
+        content: " ";
+        display: table;
+        clear: both;
+        margin-bottom: 20px;
+      }
+      .left-colomn {
+        float: left;
+        width: 70%;
+
+        text-align: left;
+      }
+
+      .right-colomn {
+        float: right;
+        width: 30%;
+
+        padding-left: 20px;
+      }
+
+      .cardd {
+        padding: 20px;
+        background-color: #ffffff;
+        margin-top: 20px;
+      }
+
+      .cardd img {
+        width: 100%;
+      }
+      .right-colomn .cardd img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 10px;
+      }
+      .right-colomn .cardd h2,
+      h3 {
+        margin-bottom: 10px;
+      }
+      .left-colomn .cardd img {
+        height: 500px;
+        margin: 10px auto;
+      }
+      .left-colomn .cardd h3 {
+        margin: 10px auto;
+      }
+
+      @media (max-width: 992px) {
+        .row {
+          width: 100%;
+          padding: 0;
+        }
+        .left-colomn,
+        .right-colomn {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="left-colomn">
+        <div class="cardd">
+          <h2>TITLE HEADING</h2>
+          <h3>TITLE DESCRIPTION, Des 7,2020</h3>
+          <img
+            src="https://images.pexels.com/photos/1585893/pexels-photo-1585893.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+          <p>Some text...</p>
+          <p>
+            making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+        </div>
+        <div class="cardd">
+          <h2>TITLE HEADING</h2>
+          <h3>TITLE DESCRIPTION, Des 7,2020</h3>
+          <img
+            src="https://images.pexels.com/photos/206648/pexels-photo-206648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt=""
+          />
+          <p>Some text...</p>
+          <p>
+            making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+        </div>
+      </div>
+
+      <div class="right-colomn">
+        <div class="cardd">
+          <h2>About me</h2>
+          <img
+            src="https://images.pexels.com/photos/10353498/pexels-photo-10353498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+          <p>
+            making it look like readable English. Many desktop publishing
+            packages and web page editors
+          </p>
+        </div>
+        <div class="cardd">
+          <h3>Popular post</h3>
+          <img
+            src="https://images.pexels.com/photos/1585893/pexels-photo-1585893.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+          <img
+            src="https://images.pexels.com/photos/349447/pexels-photo-349447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+          <img
+            src="https://images.pexels.com/photos/688830/pexels-photo-688830.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          />
+        </div>
+
+        <div class="cardd">
+          <h3>Follow me</h3>
+          <p>some text...</p>
+        </div>
+        <div class="cardd">
+          <h3>Follow me</h3>
+          <p>some text...</p>
+        </div>
+        <div class="cardd">
+          <h3>Follow me</h3>
+          <p>some text...</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
